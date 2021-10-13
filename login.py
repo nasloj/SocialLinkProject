@@ -5,7 +5,7 @@ print(django.get_version())
 print(django._author_)
 
 
- def logout_request(request):
+def logout_request(request):
       logout(request)
       return redirect("")
 
