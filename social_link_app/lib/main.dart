@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'register.dart';
 
 void main() {
-  runApp(const MyApp());
+  // runApp(const MyApp());
+  runApp(MaterialApp(
+    home: RegisterPage(),
+
+  ));
+
 }
 
 class MyApp extends StatelessWidget {
