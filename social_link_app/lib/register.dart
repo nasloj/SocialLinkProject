@@ -25,7 +25,7 @@ class RegisterPage extends StatelessWidget {
     const String button = "Sign Up";
 
     return Scaffold(
-
+      
       body: Container(
         color: backgroundColor,
 
@@ -35,6 +35,13 @@ class RegisterPage extends StatelessWidget {
 
             // ignore: prefer_const_literals_to_create_immutables
             children: [
+              
+              Text(
+                email,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
               Container(
                 padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
                 child: TextField(
@@ -57,7 +64,12 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
 
-
+              Text(
+                username,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
               Container(
                 padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
 
@@ -82,6 +94,12 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
 
+              Text(
+                password,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
               Container(
                 padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
                 child: TextField(
