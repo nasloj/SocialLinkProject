@@ -38,6 +38,9 @@ class RegisterPage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
                 child: TextField(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                   decoration: InputDecoration(
                     fillColor: tFillColor,
                     filled: true,
@@ -59,6 +62,9 @@ class RegisterPage extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
 
                 child: TextField(
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                   decoration: InputDecoration(
                     fillColor: tFillColor,
                     filled: true,
@@ -80,7 +86,9 @@ class RegisterPage extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
                 child: TextField(
                   obscureText: true,
-                  
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: tFillColor,
