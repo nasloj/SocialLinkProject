@@ -3,15 +3,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  //WidgetsApp //MaterialApp //CupertinoApp
-  runApp(MaterialApp(
-    home: RegisterPage(),
-
-  ));
-}
-
-class RegisterPage extends StatelessWidget {
+class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color backgroundColor = const Color.fromARGB(255, 36, 37, 45);

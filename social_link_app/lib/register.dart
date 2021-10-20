@@ -3,14 +3,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  //WidgetsApp //MaterialApp //CupertinoApp
-  runApp(MaterialApp(
-    home: RegisterPage(),
-
-  ));
-}
-
 class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
