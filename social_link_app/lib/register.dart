@@ -30,6 +30,7 @@ class RegisterPage extends StatelessWidget {
               
               Text(
                 email,
+                textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -58,6 +59,7 @@ class RegisterPage extends StatelessWidget {
 
               Text(
                 username,
+                textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Colors.white,
                 ),
@@ -88,6 +90,7 @@ class RegisterPage extends StatelessWidget {
 
               Text(
                 password,
+                textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Colors.white,
                 ),
