@@ -17,124 +17,13 @@ class ProfilePage extends StatelessWidget {
     const String button = "Sign Up";
 
     return Scaffold(
-      
+      appBar: AppBar(
+        backgroundColor: backgroundColor,
+
+        ),
       body: Container(
         color: backgroundColor,
-
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              
-              Text(
-                email,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
-                child: TextField(
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  decoration: InputDecoration(
-                    fillColor: tFillColor,
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: tFocusColor),
-                      borderRadius: BorderRadius.circular(15.0)
-                    ),
-                  ),
-                ),
-              ),
-
-              Text(
-                username,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
-
-                child: TextField(
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  decoration: InputDecoration(
-                    fillColor: tFillColor,
-                    filled: true,
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    focusColor: Colors.black,
-
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: tFocusColor),
-                      borderRadius: BorderRadius.circular(15.0)
-                    )
-                  ),
-                ),
-              ),
-
-              Text(
-                password,
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(50, 20, 50, 20),
-                child: TextField(
-                  obscureText: true,
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: tFillColor,
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(15.0)
-                    ),
-
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: tFocusColor),
-                      borderRadius: BorderRadius.circular(15.0),
-                    )
-                  ),
-                ),
-              ),
-
-              Container(
-                padding: EdgeInsets.fromLTRB(110, 20, 110, 20),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: [buttonColor1, buttonColor2],
-                  ),
-                ),
-                child: Text(
-                  button,
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-              )
-            ],
-          ),
-        ),
+        child: Text("Home Page",style: TextStyle(color: Colors.white),)
       ),
     );
   }
