@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:social_link_app/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -155,7 +156,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 onTap: () {
-                  print(userNameCont.text);
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RegisterPage()));
                 },
               )
             ],
