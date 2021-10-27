@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'post.dart';
-import 'register.dart';
+import 'register_page.dart';
 import 'profile.dart';
 
 void main() {
