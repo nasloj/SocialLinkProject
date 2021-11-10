@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_link_app/profile_page.dart';
 import 'package:social_link_app/register_page.dart';
+import 'homehub.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -157,7 +158,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
                 },
               )
             ],
