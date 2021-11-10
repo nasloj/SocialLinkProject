@@ -5,7 +5,7 @@ import 'register_page.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: HomeHub(),
+    home: RegisterPage(),
 
   ));
 }
