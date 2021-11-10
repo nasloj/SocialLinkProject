@@ -4,7 +4,6 @@ import 'register_page.dart';
 
 
 void main() {
-  // runApp(const MyApp());
   runApp(MaterialApp(
     home: HomeHub(),
 
