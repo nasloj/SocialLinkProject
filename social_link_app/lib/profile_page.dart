@@ -42,7 +42,7 @@ class ProfilePage extends StatelessWidget {
         selectedItemColor: Color.fromARGB(255, 181, 55, 254),
         unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
-       currentIndex: 0, // this will be set when a new tab is tapped
+       currentIndex: 3, // this will be set when a new tab is tapped
        items: [
          BottomNavigationBarItem(
            icon: new Icon(Icons.home,color: Colors.grey,),
