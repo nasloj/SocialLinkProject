@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'profile_page.dart';
+import 'search.dart';
+import 'notification_page.dart';
 
 class HomeHub extends StatelessWidget {
   int _selectedIndex = 0;
@@ -84,11 +86,11 @@ class HomeHub extends StatelessWidget {
        ],
        onTap: (int x) {
           if(x == 0){// Home Button
-            //Dont need to do anything, already home
+            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
           }else if(x==1){ //Search button
-
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Search()));
           }else if(x == 2){ //Notification Button
-
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
           }else if(x == 3){ //Profile Page Button
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
           }

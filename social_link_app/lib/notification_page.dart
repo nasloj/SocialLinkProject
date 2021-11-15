@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'homehub.dart';
+import 'profile_page.dart';
 import 'search.dart';
-import 'notification_page.dart';
 
-class ProfilePage extends StatelessWidget {
+class NotificationPage extends StatelessWidget {
   int _selectedIndex = 0;
 
 
@@ -19,7 +19,7 @@ class ProfilePage extends StatelessWidget {
       
         appBar: new AppBar(
         centerTitle: true,  
-        title: new Text('Profile Page',),
+        title: new Text('Notification Page',),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -90,9 +90,9 @@ class ProfilePage extends StatelessWidget {
           }else if(x==1){ //Search button
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Search()));
           }else if(x == 2){ //Notification Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
+            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
           }else if(x == 3){ //Profile Page Button
-            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
           }
                   
         },
