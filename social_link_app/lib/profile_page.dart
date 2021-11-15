@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
         ),
       body: Container(
         color: backgroundColor,
-        child: Text("Home Page",style: TextStyle(color: Colors.white),)
+        child: Text("Profile Page",style: TextStyle(color: Colors.white),)
       ),
     );
   }

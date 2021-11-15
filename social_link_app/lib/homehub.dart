@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'profile_page.dart';
 
 class HomeHub extends StatelessWidget {
   int _selectedIndex = 0;
@@ -77,6 +78,9 @@ class HomeHub extends StatelessWidget {
          
         
        ],
+       onTap: (int x) {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+                },
       //  //  currentIndex: _selectedIndex,
       // //  selectedItemColor: Color.fromARGB(255, 142, 63, 255),
       // currentIndex: _selectedIndex,
