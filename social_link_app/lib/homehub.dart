@@ -79,8 +79,17 @@ class HomeHub extends StatelessWidget {
         
        ],
        onTap: (int x) {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
-                },
+          if(x == 0){// Home Button
+            //Dont need to do anything, already home
+          }else if(x==1){ //Search button
+
+          }else if(x == 2){ //Notification Button
+
+          }else if(x == 3){ //Profile Page Button
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+          }
+                  
+        },
       //  //  currentIndex: _selectedIndex,
       // //  selectedItemColor: Color.fromARGB(255, 142, 63, 255),
       // currentIndex: _selectedIndex,
