@@ -47,11 +47,26 @@ class HomeHub extends StatelessWidget {
            
           
          ),
+         
          BottomNavigationBarItem(
-           icon: new Icon(Icons.mail,color: Colors.grey,),
-           title: new Text('Messages'),
+           icon: Icon(Icons.search, color: Colors.grey,),
+           title: Text('Search'),
            
-          //  color: Colors.white 
+           
+         ),
+        //  BottomNavigationBarItem(
+        //    icon: new Icon(Icons.mail,color: Colors.grey,),
+        //    title: new Text('Messages'),
+          
+           
+        //   //  color: Colors.white 
+        //  ),
+
+         BottomNavigationBarItem(
+           icon: Icon(Icons.notifications, color: Colors.grey,),
+           title: Text('Notifications'),
+           
+           
          ),
          BottomNavigationBarItem(
            icon: Icon(Icons.person, color: Colors.grey,),
@@ -59,6 +74,7 @@ class HomeHub extends StatelessWidget {
            
            
          ),
+         
         
        ],
       //  //  currentIndex: _selectedIndex,
