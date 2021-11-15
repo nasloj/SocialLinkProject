@@ -44,6 +44,7 @@ class HomeHub extends StatelessWidget {
        items: [
          BottomNavigationBarItem(
            icon: new Icon(Icons.home,color: Colors.grey,),
+           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
            title: new Text('Home'),
            
           
@@ -51,6 +52,7 @@ class HomeHub extends StatelessWidget {
          
          BottomNavigationBarItem(
            icon: Icon(Icons.search, color: Colors.grey,),
+           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Search'),
            
            
@@ -65,12 +67,14 @@ class HomeHub extends StatelessWidget {
 
          BottomNavigationBarItem(
            icon: Icon(Icons.notifications, color: Colors.grey,),
+           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Notifications'),
            
            
          ),
          BottomNavigationBarItem(
            icon: Icon(Icons.person, color: Colors.grey,),
+           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Profile'),
            
            
