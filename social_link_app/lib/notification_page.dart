@@ -54,7 +54,7 @@ class NotificationPage extends StatelessWidget {
          
          BottomNavigationBarItem(
            icon: Icon(Icons.search, color: Colors.grey,),
-           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
+           activeIcon: new Icon(Icons.search,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Search'),
            
            
@@ -69,14 +69,14 @@ class NotificationPage extends StatelessWidget {
 
          BottomNavigationBarItem(
            icon: Icon(Icons.notifications, color: Colors.grey,),
-           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
+           activeIcon: new Icon(Icons.notifications,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Notifications'),
            
            
          ),
          BottomNavigationBarItem(
            icon: Icon(Icons.person, color: Colors.grey,),
-           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
+           activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Profile'),
            
            
