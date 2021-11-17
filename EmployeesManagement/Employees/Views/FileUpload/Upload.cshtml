@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Upload</h1>
+<!--
+    Create a form tag with a post method
+    enctype type is "multipart"
+    controller is "FileUpload"
+    action is "Upload"
+    in order to file upload we must speciy the enctyption type as
+    in order to support file upload we must specify the encryption type as "multipart/form-data"
+    the encryption type attribute specifies how the form data should be encoded when submitting it to the server
+    this attribute can be used only if the form method is post.
+-->
+<form method="post" enctype="multipart/form-data" asp-controller="FileUpload" asp-action="Upload">
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Up1oad one or more files using this form:</p> <!--Message for the user-->
+            <input type="file" name="files" multiple /> <!--Input file elemnt with a multipe attribute to support mutiple files-->
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input type="submit" value="Upload" /> <!--simple submit button to trigger our post action-->
+        </div>
+    </div>
+</form>
+
