@@ -1,12 +1,14 @@
-// ignore_for_file: prefer_const_constructors
-
+import 'package:flutter/material.dart';
+import 'homehub.dart';
+import 'profile_page.dart';
+import 'search.dart';
 import 'package:flutter/material.dart';
 import 'package:social_link_app/profile_page.dart';
 import 'package:social_link_app/register_page.dart';
-import 'homehub.dart';
-import 'profilesettings.dart';
+import 'package:flutter/services.dart';
 
-class LoginPage extends StatelessWidget {
+
+class PSettingsP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color backgroundColor = const Color.fromARGB(255, 36, 37, 45);
@@ -14,12 +16,12 @@ class LoginPage extends StatelessWidget {
     Color tFillColor = const Color.fromARGB(255, 45, 45, 45);
     Color buttonColor1 = const Color.fromARGB(255, 142, 63, 255);
     Color buttonColor2 = const Color.fromARGB(255, 181, 55, 254);
-    const String title = "Login";
-    const String username = "Username";
-    const String password = "Password";
-    const String button = "Login";
-    final userNameCont = TextEditingController();
-    final passwordCont = TextEditingController();
+    const String button = "Sign Out";
+    const String title = "Profile";
+    const String aboutME = "About me:";
+    // const String password = "Password";
+    final aboutmeCont = TextEditingController();
+ 
 
     return Scaffold(
 
@@ -70,7 +72,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(right: 200, top: 0),
                 child: Text(
-                  username,
+                  aboutME,
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -80,7 +82,8 @@ class LoginPage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.fromLTRB(50, 10, 50, 20),
                 child: TextField(
-                  controller: userNameCont,
+                  controller: aboutmeCont,
+                  maxLength: 70, //MAX 70 charcters!
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -100,42 +103,42 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              Container(
-                margin: EdgeInsets.only(right: 200),
-                child: Text(
-                  password,
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(right: 200),
+              //   child: Text(
+              //     password,
+              //     style: TextStyle(
+              //       color: Colors.white,
+              //     ),
+              //   ),
+              // ),
 
-              Container(
-                padding: EdgeInsets.fromLTRB(50, 10, 50, 20),
-                child: TextField(
-                  obscureText: true,
-                  controller: passwordCont,
+              // Container(
+              //   padding: EdgeInsets.fromLTRB(50, 10, 50, 20),
+              //   child: TextField(
+              //     obscureText: true,
+              //     controller: passwordCont,
 
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
+              //     style: TextStyle(
+              //       color: Colors.white,
+              //     ),
                   
-                  decoration: InputDecoration(
+              //     decoration: InputDecoration(
                     
-                    filled: true,
-                    fillColor: tFillColor,
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(15.0)
-                    ),
+              //       filled: true,
+              //       fillColor: tFillColor,
+              //       border: OutlineInputBorder(
+              //         borderSide: BorderSide.none,
+              //         borderRadius: BorderRadius.circular(15.0)
+              //       ),
 
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: tFocusColor),
-                      borderRadius: BorderRadius.circular(15.0),
-                    )
-                  ),
-                ),
-              ),
+              //       focusedBorder: OutlineInputBorder(
+              //         borderSide: BorderSide(color: tFocusColor),
+              //         borderRadius: BorderRadius.circular(15.0),
+              //       )
+              //     ),
+              //   ),
+              // ),
 
               GestureDetector(
                 child: Container(
@@ -159,7 +162,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
                 },
               )
             ],
@@ -169,3 +172,29 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
+// dependencies:
+//   settings_ui: ^0.7.0
+
+//   SettingsList(
+//         sections: [
+//           SettingsSection(
+//             title: 'Section',
+//             tiles: [
+//               SettingsTile(
+//                 title: 'Language',
+//                 subtitle: 'English',
+//                 leading: Icon(Icons.language),
+//                 onPressed: (BuildContext context) {},
+//               ),
+//               SettingsTile.switchTile(
+//                 title: 'Use fingerprint',
+//                 leading: Icon(Icons.fingerprint),
+//                 switchValue: value,
+//                 onToggle: (bool value) {},
+//               ),
+//             ],
+//           ),
+//         ],
+//       )
+// https://medium.com/@adityadroid/60-days-of-flutter-building-a-messenger-from-scratch-ab2c89e1fd0f

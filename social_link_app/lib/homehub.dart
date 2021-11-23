@@ -89,7 +89,7 @@ class HomeHub extends StatelessWidget {
           if(x == 0){// Home Button
             //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
           }else if(x==1){ //Search button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Search()));
           }else if(x == 2){ //Notification Button
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
           }else if(x == 3){ //Profile Page Button
