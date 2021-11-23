@@ -53,12 +53,12 @@ class HomeHub extends StatelessWidget {
          ),
          
          BottomNavigationBarItem(
-           icon: Icon(Icons.search, color: Colors.grey,),
+           icon: Icon(Icons.settings, color: Colors.grey,),
            activeIcon: new Icon(Icons.search,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Search'),
+           title: Text('Settings'),
            
            
-         ),
+          ),
         //  BottomNavigationBarItem(
         //    icon: new Icon(Icons.mail,color: Colors.grey,),
         //    title: new Text('Messages'),
@@ -67,17 +67,18 @@ class HomeHub extends StatelessWidget {
         //   //  color: Colors.white 
         //  ),
 
-         BottomNavigationBarItem(
-           icon: Icon(Icons.notifications, color: Colors.grey,),
-           activeIcon: new Icon(Icons.notifications,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Notifications'),
+        //  BottomNavigationBarItem(
+        //    icon: Icon(Icons.notifications, color: Colors.grey,),
+        //    activeIcon: new Icon(Icons.notifications,color: Color.fromARGB(255, 181, 55, 254),),
+        //    title: Text('Notifications'),
            
            
-         ),
+        //  ),
          BottomNavigationBarItem(
            icon: Icon(Icons.person, color: Colors.grey,),
            activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Profile'),
+           
            
            
          ),
@@ -88,7 +89,7 @@ class HomeHub extends StatelessWidget {
           if(x == 0){// Home Button
             //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
           }else if(x==1){ //Search button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Search()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ()));
           }else if(x == 2){ //Notification Button
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
           }else if(x == 3){ //Profile Page Button
