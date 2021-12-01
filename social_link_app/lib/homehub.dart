@@ -21,6 +21,8 @@ class HomeHub extends StatelessWidget {
       Post(likes: 12, comments: 5, appColor: Colors.blue,text: "Example Post 1",),
       Post(likes: 42, comments: 12, appColor: Colors.blue,text: "Example Post 2",),
       Post(likes: 0, comments: 99, appColor: Colors.blue,text: "Example Post 3",),
+      Post(likes: 34, comments: 22, appColor: Colors.blue,text: "Example Post 4",),
+
 
     ];
 

@@ -43,7 +43,7 @@ class _PostState extends State<Post> {
       style: TextStyle(color: Colors.grey),));
     
     return Container(
-      
+      height: 200,
       decoration: BoxDecoration(
         gradient: LinearGradient(
               begin: Alignment.topLeft,
