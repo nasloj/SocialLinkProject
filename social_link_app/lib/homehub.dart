@@ -18,7 +18,10 @@ class HomeHub extends StatelessWidget {
     Color backgroundColor = const Color.fromARGB(255, 36, 37, 45);
     Color iconColor = const Color.fromARGB(255, 36, 37, 45);
     List<Post> posts = [
-      Post(likes: 12, comments: 5, appColor: Colors.blue,text: "Post 1",),
+      Post(likes: 12, comments: 5, appColor: Colors.blue,text: "Example Post 1",),
+      Post(likes: 42, comments: 12, appColor: Colors.blue,text: "Example Post 2",),
+      Post(likes: 0, comments: 99, appColor: Colors.blue,text: "Example Post 3",),
+
     ];
 
     return Scaffold(
@@ -53,7 +56,7 @@ class HomeHub extends StatelessWidget {
         alignment: Alignment.center,
         child:
           ListView.builder(
-            itemCount: 1,
+            itemCount: posts.length,
             itemBuilder: (BuildContext context, int index) {
               return posts[index];
             },
