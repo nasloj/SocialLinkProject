@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'homehub.dart';
-import 'search.dart';
+import 'profilesettings.dart';
 import 'notification_page.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -42,7 +42,7 @@ class ProfilePage extends StatelessWidget {
         selectedItemColor: Color.fromARGB(255, 181, 55, 254),
         unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
-       currentIndex: 3, // this will be set when a new tab is tapped
+       currentIndex: 1, // this will be set when a new tab is tapped
        items: [
          BottomNavigationBarItem(
            icon: new Icon(Icons.home,color: Colors.grey,),
@@ -53,54 +53,37 @@ class ProfilePage extends StatelessWidget {
          ),
          
          BottomNavigationBarItem(
-           icon: Icon(Icons.search, color: Colors.grey,),
-           activeIcon: new Icon(Icons.search,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Search'),
+           icon: Icon(Icons.settings, color: Colors.grey,),
+           activeIcon: new Icon(Icons.settings,color: Color.fromARGB(255, 181, 55, 254),),
+           title: Text('Settings'),
            
            
-         ),
-        //  BottomNavigationBarItem(
-        //    icon: new Icon(Icons.mail,color: Colors.grey,),
-        //    title: new Text('Messages'),
-          
-           
-        //   //  color: Colors.white 
-        //  ),
-
-         BottomNavigationBarItem(
-           icon: Icon(Icons.notifications, color: Colors.grey,),
-           activeIcon: new Icon(Icons.notifications,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Notifications'),
-           
-           
-         ),
+          ),
+        
          BottomNavigationBarItem(
            icon: Icon(Icons.person, color: Colors.grey,),
            activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Profile'),
            
            
+           
          ),
+         
+        
          
         
        ],
        onTap: (int x) {
           if(x == 0){// Home Button
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-          }else if(x==1){ //Search button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Search()));
+          }else if(x==1){ //PSettingsP button
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
           }else if(x == 2){ //Notification Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
-          }else if(x == 3){ //Profile Page Button
-            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
           }
                   
         },
-      //  //  currentIndex: _selectedIndex,
-      // //  selectedItemColor: Color.fromARGB(255, 142, 63, 255),
-      // currentIndex: _selectedIndex,
-      //   selectedItemColor: Colors.amber[800],
-      //   onTap: _onItemTapped,
+      
        
      ),
       

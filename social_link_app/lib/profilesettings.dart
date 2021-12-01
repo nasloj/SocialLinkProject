@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'homehub.dart';
 import 'profile_page.dart';
-import 'search.dart';
 import 'package:flutter/material.dart';
 import 'package:social_link_app/profile_page.dart';
 import 'package:social_link_app/register_page.dart';
 import 'package:flutter/services.dart';
+import 'profile_edit.dart';
 
 
 class PSettingsP extends StatelessWidget {
@@ -16,6 +16,7 @@ class PSettingsP extends StatelessWidget {
     Color tFillColor = const Color.fromARGB(255, 45, 45, 45);
     Color buttonColor1 = const Color.fromARGB(255, 142, 63, 255);
     Color buttonColor2 = const Color.fromARGB(255, 181, 55, 254);
+    String imageUrl = "https://media.istockphoto.com/photos/portrait-of-smiling-optimistic-beard-pensioner-man-wear-light-blue-picture-id1287789056?b=1&k=20&m=1287789056&s=170667a&w=0&h=Z5fxguvjTc6keKU8HUbqTznSA3LNnIsn0ZYl9UyRhTc=";
     const String button = "Sign Out";
     const String title = "Profile";
     const String aboutME = "About me:";
@@ -38,28 +39,57 @@ class PSettingsP extends StatelessWidget {
                 padding: EdgeInsets.only(),
 
                 child: Container(
-                  margin: EdgeInsets.only(left: 50),
+                  margin: EdgeInsets.only(left: 15, top: 0),
 
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,          
                     children: [
-                      IconButton(onPressed: (){}, icon: Icon(
+                      IconButton(onPressed: (){Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserAccount()));}, icon: Icon(
                         Icons.arrow_back_ios_new,
                         color: Colors.white,
                         size: 20,
                       )),
+                      // onTap: () {
+                      // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
+                      // },
+                      
+                      
+                    
                       Text(
                         title,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 30,
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
+                        
                       ),
                     ],
+            
+                    
+                
                   ),
                 ),
+                
               ),
+              
+              Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage(imageUrl),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      "John Doe",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+              
 
               Container(
                 margin: EdgeInsets.only(top: 10),
@@ -102,6 +132,19 @@ class PSettingsP extends StatelessWidget {
                   ),
                 ),
               ),
+              Row(
+    children: <Widget>[
+        Expanded(
+            child: Divider()
+        ),       
+
+        Text("Your Posts", style: TextStyle(color: Colors.grey,)),        
+
+        Expanded(
+            child: Divider()
+        ),
+    ]
+),
 
               // Container(
               //   margin: EdgeInsets.only(right: 200),
@@ -161,9 +204,9 @@ class PSettingsP extends StatelessWidget {
                   ),
                 ),
 
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-                },
+                // onTap: () {
+                //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
+                // },
               )
             ],
           ),

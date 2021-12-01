@@ -1,6 +1,14 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'homehub.dart';
+import 'profile_page.dart';
+import 'package:flutter/material.dart';
+import 'package:social_link_app/profile_page.dart';
+import 'package:social_link_app/register_page.dart';
+import 'package:flutter/services.dart';
+import 'profilesettings.dart';
+import 'social_links.dart';
 
 class UserAccount extends StatelessWidget {
   const UserAccount({Key? key}) : super(key: key);
@@ -14,6 +22,56 @@ class UserAccount extends StatelessWidget {
     String imageUrl = "https://media.istockphoto.com/photos/portrait-of-smiling-optimistic-beard-pensioner-man-wear-light-blue-picture-id1287789056?b=1&k=20&m=1287789056&s=170667a&w=0&h=Z5fxguvjTc6keKU8HUbqTznSA3LNnIsn0ZYl9UyRhTc=";
 
     return Scaffold(
+      
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 36, 37, 45),
+        selectedItemColor: Color.fromARGB(255, 181, 55, 254),
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
+       currentIndex: 1, // this will be set when a new tab is tapped
+       items: [
+         BottomNavigationBarItem(
+           icon: new Icon(Icons.home,color: Colors.grey,),
+           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
+           title: new Text('Home'),
+           
+          
+         ),
+         
+         BottomNavigationBarItem(
+           icon: Icon(Icons.settings, color: Colors.grey,),
+           activeIcon: new Icon(Icons.settings,color: Color.fromARGB(255, 181, 55, 254),),
+           title: Text('Settings'),
+           
+           
+          ),
+        
+         BottomNavigationBarItem(
+           icon: Icon(Icons.person, color: Colors.grey,),
+           activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
+           title: Text('Profile'),
+           
+           
+           
+         ),
+         
+        
+         
+        
+       ],
+       onTap: (int x) {
+          if(x == 0){// Home Button
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
+          }else if(x==1){ //PSettingsP button
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
+          }else if(x == 2){ //Notification Button
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+          }
+                  
+        },
+      
+       
+     ),
       appBar:  AppBar(
         centerTitle: true,
         title: Text(title),
@@ -68,54 +126,87 @@ class UserAccount extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Icon(
-                          Icons.umbrella,
-                          color: Colors.white,
-                        )
-                      ),
-              
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0),
-                        child: Text(
-                          "Social Links",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontStyle: FontStyle.italic,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => SocialLinks()));
+                    },
 
-                  SizedBox(height: 30.0),
-              
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 100.0),
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 20.0,),
+                          padding: const EdgeInsets.only(left: 20.0),
                           child: Icon(
-                            Icons.person,
+                            Icons.umbrella,
                             color: Colors.white,
                           )
                         ),
-              
+                                
                         Padding(
                           padding: const EdgeInsets.only(left: 20.0),
                           child: Text(
-                            "Profile",
+                            "Social Links",
                             style: TextStyle(
                               color: Colors.white,
-                              fontStyle: FontStyle.italic
+                              fontStyle: FontStyle.italic,
                             ),
                           ),
                         ),
+                  
+                        Expanded(child: SizedBox()),
+                  
+                        Padding(
+                          padding: const EdgeInsets.only(right: 30.0),
+                          child: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.white,
+                            size: 15,
+                          ),
+                        )
                       ],
+                    ),
+                  ),
+
+                  SizedBox(height: 50.0),
+              
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 100.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
+                      },
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20.0,),
+                            child: Icon(
+                              Icons.person,
+                              color: Colors.white,
+                            )
+                          ),
+                                  
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Text(
+                              "Profile",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontStyle: FontStyle.italic
+                              ),
+                            ),
+                          ),
+
+                          Expanded(child: SizedBox()),
+
+                          Padding(
+                            padding: const EdgeInsets.only(right: 30.0),
+                            child: Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              color: Colors.white,
+                              size: 15,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],

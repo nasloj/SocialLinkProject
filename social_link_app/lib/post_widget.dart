@@ -40,15 +40,15 @@ class _PostState extends State<Post> {
       
       decoration: BoxDecoration(
         color: Colors.blue,
-        borderRadius: BorderRadius.all(Radius.circular(20))
+        borderRadius: BorderRadius.all(Radius.circular(60))
       ),
       child: Container(
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(20))
+          borderRadius: BorderRadius.all(Radius.circular(60))
       ),
         
-        margin: EdgeInsets.all(20),
+        margin: EdgeInsets.all(60),
         child: Column(
           children: postData,
         )

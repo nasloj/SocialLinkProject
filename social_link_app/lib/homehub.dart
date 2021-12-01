@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'profile_page.dart';
-import 'search.dart';
 import 'notification_page.dart';
+import 'profilesettings.dart';
+import 'profile_edit.dart';
 
 class HomeHub extends StatelessWidget {
   int _selectedIndex = 0;
@@ -54,26 +55,12 @@ class HomeHub extends StatelessWidget {
          
          BottomNavigationBarItem(
            icon: Icon(Icons.settings, color: Colors.grey,),
-           activeIcon: new Icon(Icons.search,color: Color.fromARGB(255, 181, 55, 254),),
+           activeIcon: new Icon(Icons.settings,color: Color.fromARGB(255, 181, 55, 254),),
            title: Text('Settings'),
            
            
           ),
-        //  BottomNavigationBarItem(
-        //    icon: new Icon(Icons.mail,color: Colors.grey,),
-        //    title: new Text('Messages'),
-          
-           
-        //   //  color: Colors.white 
-        //  ),
-
-        //  BottomNavigationBarItem(
-        //    icon: Icon(Icons.notifications, color: Colors.grey,),
-        //    activeIcon: new Icon(Icons.notifications,color: Color.fromARGB(255, 181, 55, 254),),
-        //    title: Text('Notifications'),
-           
-           
-        //  ),
+        
          BottomNavigationBarItem(
            icon: Icon(Icons.person, color: Colors.grey,),
            activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
@@ -88,12 +75,11 @@ class HomeHub extends StatelessWidget {
        onTap: (int x) {
           if(x == 0){// Home Button
             //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-          }else if(x==1){ //Search button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Search()));
+          }else if(x==1){ //Settings button
+            // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
           }else if(x == 2){ //Notification Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
-          }else if(x == 3){ //Profile Page Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserAccount()));
           }
                   
         },

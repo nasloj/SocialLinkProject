@@ -6,7 +6,7 @@ import 'profile_edit.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: UserAccount(),
+    home: RegisterPage(),
     title: 'Social Link',
   ));
 }
