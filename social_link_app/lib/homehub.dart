@@ -5,6 +5,7 @@ import 'notification_page.dart';
 import 'profilesettings.dart';
 import 'profile_edit.dart';
 import 'post_widget.dart';
+import 'navbar.dart';
 
 class HomeHub extends StatelessWidget {
   int _selectedIndex = 0;
@@ -42,57 +43,7 @@ class HomeHub extends StatelessWidget {
         
         
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 36, 37, 45),
-        selectedItemColor: Color.fromARGB(255, 181, 55, 254),
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
-       currentIndex: 0, // this will be set when a new tab is tapped
-       items: [
-         BottomNavigationBarItem(
-           icon: new Icon(Icons.home,color: Colors.grey,),
-           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
-           title: new Text('Home'),
-           
-          
-         ),
-         
-         BottomNavigationBarItem(
-           icon: Icon(Icons.notifications, color: Colors.grey,),
-           activeIcon: new Icon(Icons.settings,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Notifications'),
-           
-           
-          ),
-        
-         BottomNavigationBarItem(
-           icon: Icon(Icons.person, color: Colors.grey,),
-           activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Profile'),
-           
-           
-           
-         ),
-         
-        
-       ],
-       onTap: (int x) {
-          if(x == 0){// Home Button
-            //Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-          }else if(x==1){ //Settings button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
-          }else if(x == 2){ //Notification Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserAccount()));
-          }
-                  
-        },
-      //  //  currentIndex: _selectedIndex,
-      // //  selectedItemColor: Color.fromARGB(255, 142, 63, 255),
-      // currentIndex: _selectedIndex,
-      //   selectedItemColor: Colors.amber[800],
-      //   onTap: _onItemTapped,
-       
-     ),
+      bottomNavigationBar: NavBar(index: 0),
       
       body: new Container(
         color: backgroundColor,

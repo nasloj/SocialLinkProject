@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:social_link_app/navbar.dart';
 import 'homehub.dart';
 import 'profile_page.dart';
 import 'package:flutter/material.dart';
@@ -24,55 +25,7 @@ class UserAccount extends StatelessWidget {
 
     return Scaffold(
       
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 36, 37, 45),
-        selectedItemColor: Color.fromARGB(255, 181, 55, 254),
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
-       currentIndex: 2, // this will be set when a new tab is tapped
-       items: [
-         BottomNavigationBarItem(
-           icon: new Icon(Icons.home,color: Colors.grey,),
-           activeIcon: new Icon(Icons.home,color: Color.fromARGB(255, 181, 55, 254),),
-           title: new Text('Home'),
-           
-          
-         ),
-         
-         BottomNavigationBarItem(
-           icon: Icon(Icons.notifications, color: Colors.grey,),
-           activeIcon: new Icon(Icons.notifications,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Notifications'),
-           
-           
-          ),
-        
-         BottomNavigationBarItem(
-           icon: Icon(Icons.person, color: Colors.grey,),
-           activeIcon: new Icon(Icons.person,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Profile'),
-           
-           
-           
-         ),
-         
-        
-         
-        
-       ],
-       onTap: (int x) {
-          if(x == 0){// Home Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-          }else if(x==1){ //PSettingsP button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
-          }else if(x == 2){ //Notification Button
-            // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
-          }
-                  
-        },
-      
-       
-     ),
+      bottomNavigationBar: NavBar(index: 2),
       appBar:  AppBar(
         centerTitle: true,
         title: Text(title),
