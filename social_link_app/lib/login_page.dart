@@ -159,7 +159,7 @@ class LoginPage extends StatelessWidget {
                 ),
 
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
                 },
               )
             ],

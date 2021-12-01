@@ -6,6 +6,7 @@ import 'package:social_link_app/profile_page.dart';
 import 'package:social_link_app/register_page.dart';
 import 'package:flutter/services.dart';
 import 'profile_edit.dart';
+import 'login_page.dart';
 
 
 class PSettingsP extends StatelessWidget {
@@ -202,11 +203,13 @@ class PSettingsP extends StatelessWidget {
                       color: Colors.white
                     ),
                   ),
+                  
                 ),
+                
 
-                // onTap: () {
-                //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-                // },
+                onTap: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginPage()));
+                },
               )
             ],
           ),

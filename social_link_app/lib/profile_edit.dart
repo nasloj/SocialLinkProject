@@ -9,6 +9,7 @@ import 'package:social_link_app/register_page.dart';
 import 'package:flutter/services.dart';
 import 'profilesettings.dart';
 import 'social_links.dart';
+import 'notification_page.dart';
 
 class UserAccount extends StatelessWidget {
   const UserAccount({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class UserAccount extends StatelessWidget {
         selectedItemColor: Color.fromARGB(255, 181, 55, 254),
         unselectedItemColor: Colors.grey,
         type: BottomNavigationBarType.fixed,
-       currentIndex: 1, // this will be set when a new tab is tapped
+       currentIndex: 2, // this will be set when a new tab is tapped
        items: [
          BottomNavigationBarItem(
            icon: new Icon(Icons.home,color: Colors.grey,),
@@ -63,9 +64,9 @@ class UserAccount extends StatelessWidget {
           if(x == 0){// Home Button
             Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
           }else if(x==1){ //PSettingsP button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => PSettingsP()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NotificationPage()));
           }else if(x == 2){ //Notification Button
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
+            // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ProfilePage()));
           }
                   
         },
