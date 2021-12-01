@@ -9,7 +9,7 @@ class Post extends StatefulWidget {
   String? text;
   Image? image;
   int likes;
-  List<String> comments;
+  int comments;
 
 
   Post({Key? key, this.image, this.text, required this.likes, required this.comments, required this.appColor}) : super(key: key);
@@ -32,9 +32,8 @@ class _PostState extends State<Post> {
       ));
     }
     postData.add(Text(
-      "Likes: " + widget.likes.toString(),
+      "Likes: " + widget.likes.toString() + " Comments: " + widget.comments.toString(),
       style: TextStyle(color: Colors.white),));
-    postData.addAll(widget.comments.map((e) => Text(e,style: TextStyle(color: Colors.white),)));
     
     return Container(
       

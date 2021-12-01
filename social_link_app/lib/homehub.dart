@@ -4,6 +4,7 @@ import 'profile_page.dart';
 import 'notification_page.dart';
 import 'profilesettings.dart';
 import 'profile_edit.dart';
+import 'post_widget.dart';
 
 class HomeHub extends StatelessWidget {
   int _selectedIndex = 0;
@@ -15,6 +16,9 @@ class HomeHub extends StatelessWidget {
   Widget build(BuildContext context){
     Color backgroundColor = const Color.fromARGB(255, 36, 37, 45);
     Color iconColor = const Color.fromARGB(255, 36, 37, 45);
+    List<Post> posts = [
+      Post(likes: 12, comments: 5, appColor: Colors.blue,text: "Post 1",),
+    ];
 
     return Scaffold(
       
@@ -96,9 +100,13 @@ class HomeHub extends StatelessWidget {
           top: 0.0,
         ),
         alignment: Alignment.center,
-        child: new Column(
-          children: <Widget>[
-            new Text('Custom Feed Here'),
+        child:
+          ListView.builder(
+            itemCount: 1,
+            itemBuilder: (BuildContext context, int index) {
+              return posts[index];
+            },
+          ),
             
             // new FlatButton(
             //   child: new Text(
@@ -111,8 +119,8 @@ class HomeHub extends StatelessWidget {
             //   // }
             // )
             
-          ],
-        ),
+          // ],
+        
       ),
     ); 
   }
