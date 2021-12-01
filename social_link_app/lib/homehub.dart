@@ -54,9 +54,9 @@ class HomeHub extends StatelessWidget {
          ),
          
          BottomNavigationBarItem(
-           icon: Icon(Icons.settings, color: Colors.grey,),
+           icon: Icon(Icons.notifications, color: Colors.grey,),
            activeIcon: new Icon(Icons.settings,color: Color.fromARGB(255, 181, 55, 254),),
-           title: Text('Settings'),
+           title: Text('Notifications'),
            
            
           ),
