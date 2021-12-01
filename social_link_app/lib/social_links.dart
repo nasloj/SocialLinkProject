@@ -1,14 +1,5 @@
-// ignore_for_file: file_names, prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'profile_edit.dart';
-import 'homehub.dart';
-import 'profile_page.dart';
-import 'package:flutter/material.dart';
-import 'package:social_link_app/profile_page.dart';
-import 'package:social_link_app/register_page.dart';
-import 'package:flutter/services.dart';
-import 'profilesettings.dart';
+import 'package:social_link_app/profile_edit.dart';
 
 class SocialLinks extends StatelessWidget {
   const SocialLinks({Key? key}): super(key: key);
@@ -23,38 +14,6 @@ class SocialLinks extends StatelessWidget {
     Widget card = Stack(
       children: <Widget>[
         Container(
-                  margin: EdgeInsets.only(left: 15, top: 0),
-
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,          
-                    children: [
-                      IconButton(onPressed: (){Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserAccount()));}, icon: Icon(
-                        Icons.arrow_back_ios_new,
-                        color: Colors.white,
-                        size: 20,
-                      )),
-                      // onTap: () {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeHub()));
-                      // },
-                      
-                      
-                    
-                      Text(
-                        title,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        
-                      ),
-                    ],
-            
-                    
-                
-                  ),
-                ),
-        Container(
           margin: EdgeInsets.only(top: 80.0),
           height: 100,
           width: 300,
@@ -67,7 +26,6 @@ class SocialLinks extends StatelessWidget {
               colors: [cardColor1, cardColor2],
             )
           ),
-          
 
           child: Center(
             child: Padding(
@@ -130,6 +88,12 @@ class SocialLinks extends StatelessWidget {
 
     return Scaffold(
       appBar:  AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => UserAccount()));
+          },
+         icon: Icon(Icons.arrow_back_ios_new)
+        ),
         backgroundColor: backgroundColor,
         elevation: 0,
         centerTitle: true,

@@ -1,5 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'profile_page.dart';
+import 'notification_page.dart';
+import 'profilesettings.dart';
+import 'profile_edit.dart';
+import 'post_widget.dart';
+
 
 Color backgroundColor = const Color.fromARGB(255, 36, 37, 45);
 
@@ -28,26 +35,32 @@ class _PostState extends State<Post> {
     if (widget.text != null){
       postData.add(Text(
         widget.text.toString(),
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.grey),
       ));
     }
     postData.add(Text(
-      "Likes: " + widget.likes.toString() + " Comments: " + widget.comments.toString(),
-      style: TextStyle(color: Colors.white),));
+      "Likes:" + widget.likes.toString() + "                 |                 Comments: " + widget.comments.toString(),
+      style: TextStyle(color: Colors.grey),));
     
     return Container(
       
       decoration: BoxDecoration(
-        color: Colors.blue,
-        borderRadius: BorderRadius.all(Radius.circular(60))
+        gradient: LinearGradient(
+              begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[
+                  Color.fromARGB(255, 142, 63, 255),
+                  Color.fromARGB(255, 181, 55, 254),
+                ]),
+        borderRadius: BorderRadius.all(Radius.circular(15))
       ),
       child: Container(
         decoration: BoxDecoration(
           color: backgroundColor,
-          borderRadius: BorderRadius.all(Radius.circular(60))
+          borderRadius: BorderRadius.all(Radius.circular(15))
       ),
         
-        margin: EdgeInsets.all(60),
+        margin: EdgeInsets.all(6),
         child: Column(
           children: postData,
         )
